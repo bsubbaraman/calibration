@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>bed leveling! first prints!</mark></h2>
+  <span class="post-meta">2021.04.11 | blair </span>
+
+  <br/><br/>
+
+  I got started with manual bed leveling using <a href="https://www.youtube.com/watch?v=T-Z3GmM20JM">this video</a>. I auto-homed, then disabled the steppers to move things around manually. Starting
+  with the front left corner, I placed the extruder ~1cm inside of my workable area (which is cut down slightly by the clips I'm using to attach the glass bed). I brought all the corners down a few turns
+  before beginning. Using a piece of paper from a journal, I brought the corner up until the paper was pinched and the paper crumpled/folded when I moved it around, then slowly brought it down
+  from there. (Just a small turn really changes this a lot!). Videos commented that you want a bit of drag - not too tight, not too loose, a goldilocks situation. I erred on the side of too loose to start so that I could more systematically tighten 
+  things up on subsequent iterations. After leveling the front right corner and then to the back right, I noticed it was too high and the nozzle was going to scrape the bed to get over, so I backed off
+  the back two corners even more. It took me about three round trips to get everything feeling about the same. I figured that things were a bit too far away but wanted to see what would happen!
+
+  <br/><br/>
+
+  For the sake of following along with the video, I used their linked <a href="https://www.thingiverse.com/thing:4077747">calibration print</a> with all standard settings in Cura. (It was actually
+  too big for my print area, so I scaled it down a bit). It was immediately clear that the nozzle was too far away; the front of the print didn't adhere to the bed at all, and the print started moving around and become spaghetti.
+
+  <br/><br/>
+
+  <img class="fig_img center" src="../images/badX.jpg">
+  <span class="post-meta center">:( </span>
+  
+  <br/><br/>
+
+  In readjusting the manual bed leveling, I switched to normal notebook paper because the journal paper I was using is of a thicker stock. I was also more aggressive/less timid in my tightening.
+  I tightened to the point of almost-crumpling when moving, and then backed off ~1/8 turn. In moving corner to corner some parts of the bed were too high and I couldn't get the nozzle over, so I went
+  back and ever-so-slightly lowered the bed in the previous corner. The results were better but still not very goo
+
+  <br/><br/>
+
+  <img class="fig_img center" src="../images/badX2.jpg">
+  <span class="post-meta center">still not adhering! </span>
+  
+  <br/><br/>
+
+  Since I didn't see any signs of the nozzle being too close (ridges, thin-to-no filament), I went ahead and used a receipt instead of notebook paper, which was thinner still. I also opted
+  for <a href="https://www.chepclub.com/bed-level.html">this calibration routine </a> from YouTuber CHEP which conveniently moves the extruder around for you to test the distance. Then, 
+  I printed the concentric squares, testing to see if I could knowck them off with my finger. If I could, I raised that side ~1/8 turn. After running this process once & live adjusting, I printed again
+  to see how things looked:
+
+  <br/><br/>
+
+  <img class="fig_img center" src="../images/chep.jpg">
+  <span class="post-meta center">looks better! </span>
+  
+  <br/><br/>
+
+  I couldn't knock the first layer off with my finger anymore, and nothing looked too light/transparent now. After a printing a few cubes (for hcde 533), I thought I'd try a Benchy print;
+  I plan on doing some more refined tuning (e.g. extruder e-steps, etc) and wanted a print to compare changes against. 
+
+  <br/><br/>
+
+  <img class="fig_img center" src="../images/benchy.jpg">
+  <span class="post-meta center">benchy! </span>
+  
+  <br/><br/>
+
+  I think it generally looks alright! A bit of stringing on the inside, and there's one spot in particular with scratchy surface artifafts in the front right of the boat. 
+
+
+</div>
+</body>
+</html>
+
