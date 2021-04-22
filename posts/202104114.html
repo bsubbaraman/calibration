@@ -19,7 +19,7 @@
 
 <div class="post-content">
   <h2><mark>bed leveling! first prints!</mark></h2>
-  <span class="post-meta">2021.04.11 | blair </span>
+  <span class="post-meta">2021.04.14 | blair </span>
 
   <br/><br/>
 
@@ -77,6 +77,15 @@
 
   I think it generally looks alright! A bit of stringing on the inside, and there's one spot in particular with scratchy surface artifafts in the front right of the boat. 
 
+  <br/><br/>
+
+  In class (hcde 533), we played around with slicer settings. I mostly just printed cubes at various Cura-defined qualities, but the most interesting aspect of this was the disconnect between
+  Rhino (/the exported .stl) and Cura; getting a single extrusion tube, for example, requires offsetting a curve by e.g. 0.4mm from Rhino & then ensuring that the wall line width in the slicer
+  matches. In addition to toying around with slicer settings, I also had my prints start to move around ~halfway through the print, even with a brim. After redoing calibration and getting 
+  results comparable to those shown above, I played around with bed temperature. Increasing bed temperature from the default 60 to 65C helped quite a bit; I've settled now on setting the first layer
+  bed temp to 70 and 65 thereafter. I don't see any bulging (so-called <i> elephant's foot</i>) for now, but something to note if/when I'm printing larger & heavier things, maybe I'll cool this 
+  first layer back down. I also cleaned the bed with isopropyl alcohol and halfed the initial layer print speed - this is a bit of a shotgun approach to getting a good first layer, but the
+  extra couple minutes here seems worth prints potentially messing up 90% through.
 
 </div>
 </body>

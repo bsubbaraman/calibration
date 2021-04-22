@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>stress tests!</mark></h2>
+  <span class="post-meta">2021.04.19 | blair </span>
+
+  <br/><br/>
+
+  I printed a couple stress tests to check my calibration under various scenarios. First, I printed an <a href="https://www.thingiverse.com/thing:2806295"> 'all-in-one' test</a> that I found while watching YouTube videos, which includes overhang, bridging & stringing tests:
+  <br/><br/>
+  <div class="gallery">
+    <img class="fig_img" src="../images/overhang1.jpg">
+    <img class="fig_img" src="../images/overhang2.jpg">
+  </div>
+  
+  <div class="center">
+    <img class="fig_img center" src="../images/overhang3.jpg"><br/>
+    <span class="post-meta center"> all-in-one test print </span>
+  </div>
+  <br/><br/>
+
+  I'm pretty happy with how it turned out! (The results seemed comparable with the YouTuber I was watching in any case :). I was pleasantly surprised at the overhang tests which only starts to deteriorate at ~60*, but even then
+  it looks prety good from the front all the way through 80*. The bridging tests all passed, and it was only the stringing test that I should probably work more on- there's likely some retraction settings to change or maybe a lower 
+  nozzle temperature. So, I went ahead and printed a temperature tower; Cura has a 'calibration shapes' extension that includes the temp tower as well as a post-processing script to automagically generate the gcode for the temperature
+  changes:
+  <br/><br/>
+
+  <div class="center">
+    <img class="fig_img" src="../images/temptower.jpg"> <br/>
+    <span class="post-meta">it... all looks pretty similar </span>
+  </div>
+  <br/><br/>
+
+  I ran this print while I was cooking, and it looks like something happened towards the top because there should have been a complete '190*' section. But, to my eye, everything from 220 to 190 looks relatively similar to my eye (there's
+  no major stringing, in any case). The solutech filament I'm using says that it works best from 190-210*, so I'll stick with my default setting of 200* for now.
+
+  <br/><br/>
+
+  These calibration prints had me thinking more about a possible end-user calibration interface, at least insofar as it would help me out. These prints above are widely used and have been optimized to e.g. test
+  several things at once, minituarized to run quickly. One thing that seems helpful to me is the ability to co-vary a couple of settings quickly to see how they affect one another. For example, adhesion is 
+  a function of print surface area, bed temperature, z-offset, fan speed (as well as mechanical factors, like bed leveling)... Maybe I'm off-base with how I'm imagining people use their printers, but a tool that let you 
+  explore these factors together - and perhaps even suggests the parameters to inspect for a given problem - might be helpful. This also has me curious going forward about calibration tolerance windows: the resources I'm
+  reading generally treat calibration as a universal- once your printer is dialed in, you're good to print anything! This might just be because I'm looking at beginner-level tutoriasl, but I can imagine printing different
+  objects that require specific calibrations. Small & detailed objects might need a lower flow rate to reduce oozing over fine features, use cases where sanding off brim residue isn't feasible require alternative bed adhesion
+  measures, etc. Anyways, I will be interested to see if these thoughts actually play out in practice as I print More Stuff!
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>extruder calibration! tolerances!</mark></h2>
+  <span class="post-meta">2021.04.18 | blair </span>
+
+  <br/><br/>
+  While working on homework prints for hcde533, I noticed when printing single extrusion cylinders that the wall thickness was considerably bigger than the expected 0.4mm for a single wall extrusion. So, more calibration! I followed <a href="https://www.youtube.com/watch?v=xzQjtWhg9VE"> this video</a><div class="">
+    <br/>
+    <b id="esteps">part 1: e-steps</b><br/><br/>
+    <i>procedure:</i>
+    <ul>
+      <li> heat nozzle to printing temp (200* is what I'm using for my filament)</li>
+      <li> measure filament 100mm back from extruder entrance using calipers</li>
+      <li> make an additional another mark 10mm back (i.e. 110mm from extruder entrance). This is used in the case that we over-extrude in the following steps.</li>
+      <li> from the printer interface, select motion-->extruder-->100mm to run 100mm of filament through the extruder </li>
+      <li> measure the distance from the extruder entrance to the mark made earlier. i measured 10.5mm, meaning i under-extruded by ~10.5mm - only 89.5mm of filament went through the extruder</li>
+      <li> calculate the new e-step value (the current e-step value can be found in the motion menu, default is 93 steps/mm). To calculate: <br/>
+        expected length (mm) * current steps/mm = current steps --> current steps/actual length(mm) = new steps/mm <br/>
+        for me, this turned out to be: 100mm * 93 steps/mm = 9300 steps --> 9300 steps/89.5mm = <mark>104.0 steps/mm</mark> as my new value. 
+      </li> 
+      <li> repeat from beginning again to confirm the new estep value gives desired results
+    </ul>
+  
+    The results of my changes are shown in the images below; my new value brings the 100mm mark directly to the extruder entrance.
+   
+    <br/><br/>
+    <div class="gallery">
+      <img class="fig_img" src="../images/estep_before.jpg">
+      <img class="fig_img" src="../images/esteps_after.jpg"> <br/>
+    <span class="post-meta">before calibration i was under-extruding (left), a new estep value of 104 step/mm remedies this (right) </span>
+    </div>
+    <br/><br/>
+    </div>
+  
+    <b id="flow"> part 2: flow calibration</b><br/><br/>
+    <i>procedure:</i>
+    <ul>
+      <li> print a 20 mm cube with an open top; wall thickness = 0.8mm, wall count = 2, flow = 100%</li>
+      <li> measure the resulting wall thickness, taking 2 measurements per side (8 total) and average. my average came out to 0.92mm</li>
+      <li> calculate new flow rate, where desired thickness/actual thickness = flow rate. <br/>
+            for me, this came out to: 0.8mm/0.92mm = <mark>86.9%</mark></li>
+      <li> print again using new flow rate & measure</li>
+    </ul>
+  
+    I had an average thickness of 0.92mm at 100% flow rate. After adjusting to 86%, I had an average thickness of 0.78mm.
+  
+    <br/><br/>
+  
+    <div class="gallery">
+      <img class="fig_img" src="../images/flowbefore.JPG">
+      <img class="fig_img" src="../images/flowafter.JPG"> <br/>
+    <span class="post-meta">before adjusting flow rate my walls were too thick (left), a new flow rate of 86% remedies this (right) </span>
+    </div>
+    
+    <br/><br/>
+
+    This was a super fun calibration to perform, mostly because it all just... worked. I'm curious about how the step value and flow rate might change over time/different prints- this will be something to look out for.
+
+</div>
+</body>
+</html>
+

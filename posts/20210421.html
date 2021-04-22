@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>more bed temp explorations</mark></h2>
+  <span class="post-meta">2021.04.21 | blair </span>
+
+  <br/><br/>
+
+  In some of my <a href="./20210416.html">first tests</a> I noted that bed temperature was a notable variable for adhesion. As I stumble into more & more calibration prints (bed leveling, extruder calibration, stress tests...)
+  I found there wasn't much info on testing bed temperatures. Generally, too low a bed temp means no adhesion, too high means bulged first layer. I printed 5 50mmx50mm calibration squares simultaneously, manually increasing the 
+  bed temperature in 5* increments after each print (I know the M140 command will rapid change bed temp... but manual was easier for this quick test as I gain gcode literacy :/). The bed will expand as it heats up, so printing
+  them all at the same time is perhaps not the best idea- but I wanted to quickly test if they adhered at all.
+  
+  <br/><br/>
+  
+    <div class="gallery">
+      <img class="fig_img" src="../images/firstlayerspectrum2.jpg"> <br/>
+     <span class="post-meta">first layer at different bed temps. </span>
+    </div>
+    
+    <br/><br/>
+    <div class="gallery">
+      <img class="fig_img" src="../images/firstlayerspectrum.jpg"> <br/>
+      <span class="post-meta">first layer arranged in increasing temp order. </span>
+    </div>
+<br/><br/>
+
+I was a bit surprised to find that all of these prints adhered pretty well. It does look as though my nozzle is a bit too close though, something that didn't surface in e.g. the CHEP bed leveling tests. This speaks a bit to the
+trouble of isolating a single variable; I should probably recalibrate manually and try again. It also seems pretty dependent on the geometry of what's being printed, since a large surface are will adhere better. In any case, this suggests
+keeping my initial bed temp somewhere closer to 60-65* to avoid any bulging of the PLA. 
+
+<br/><br/>
+
+In hcde533 class, we started learning Grasshopper, along with flexures, compliant mechanisms, and other good stuff. As a lover of a satisfying snap and click, I am excited to make flexures
+and am inspired by things like <a href="https://www.youtube.com/watch?v=YEz-r8KDY-0">this</a>. I made a very simple little cardboard clip to start out with. It will be fun to deal with printer calibration
+in practice as I make things that need to be dimensionally accurate.
+
+<br/><br/>
+<div class="gallery">
+  <img class="fig_img" src="../images/clip-test.jpg"> <br/>
+  <span class="post-meta"> slot and height of clips are 2.5mm, matching the scrap cardboard I have </span>
+</div>
+<br/><br/>
+
+</div>
+</body>
+</html>
+

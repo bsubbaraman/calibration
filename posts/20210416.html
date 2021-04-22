@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>adhesion 😣</mark></h2>
+  <span class="post-meta">2021.04.16 | blair </span>
+
+  <br/><br/>
+
+  As I worked through <a href="https://bsubbaraman.github.io/hcde533/assignments/a2/a2.html"> many test prints</a> for digital fabrication class, I ran into a problem where the print (in this case, a cube) would move during the print;
+  the first layer(s) were fine, but somewhere after 50% through the entire object would come away from the bed (even with a brim). My first instinct here was to re-level the bed. I ran through manual calibration with receipt paper as discussed in
+  the previous entry, but the problem persisted. Then, I cleaned the glass bed with isopropyl alcohol, halved the inital layer sepeed from 20mms<sup>-1</sup> to 10mms<sup>-1</sup> and tried again. A test trying to swipe the base away from the base seemed somewhat firmer, but it could still move. After some searching,
+  I tried experimenting with the bed temperature. <br/>
+  I was running all prints at the Cura default of 200/60* for nozzle/bed temps respectively. A temperature tower test (LINK) confirmed that 200* is reasonable for my Solutech filament (which checks out with the recommended
+  190-210* suggestion on the box). <a href="https://all3dp.com/2/ender-3-pro-glass-bed-adhesion-tips-tricks/"> Resources online</a> suggested trying bed temperatures up to 70* for bed temps, in 5* increments. If the PLA cools too fast,
+  it contracts and won't stick, but too high of a temperature will result in a bulged first layer (elephant's foot). Trying out 60*, 65*, and 70* as print bed temps, I settled on the following as my 'enders game' first layer print
+  settings; that is, these settings might be 'too much' but they seem to work with some amount of definitiveness. <br/><br/>
+  <table>
+    <tr>
+      <th>setting</th>
+      <th>value</th>
+      <th>notes</th>
+    </tr>
+
+    <tr>
+      <th > initial layer speed </th>
+      <td> 10mms<sup>-1</sup></td>
+      <td> This is half of the cura default (20mms<sup>-1</sup>) </td>
+    </tr>
+
+    <tr>
+      <th> nozzle temp </th>
+      <td> 200*</td>
+      <td> this is the Cura default, aligns with suggested Solutech temps </td>
+    </tr>
+
+    <tr>
+      <th > initial bed temp </th>
+      <td> 70* </td>
+      <td> lowering to 65* after first layer. don't notice any bulging. </td>
+    </tr>
+
+    <tr>
+      <th> support </th>
+      <td> brim</td>
+      <td> curious about how a brim might 'hide' other calibration errors </td>
+    </tr>
+
+  </table>
+
+  <br/><br/>
+
+  A couple points of reflection on this process. There's a certain difficulty in isolating variables I'm encountering because I'm unsure how different steps will play together. For example, in picking a bed temperature, a 
+  slower initial speed might make up for a lower bed temperature or conversely a higher bed temp could compensate for a quick initial speed. Some of this might be my newness to things, but there's a combinatorial overwhelming-ness
+  to fiddling with these settings. It's also possibel that a better bed leveling might resolve some of this issues too. Moreover, with e.g. printing with a brim, I'm slightly tentative about how using a brim on structures that
+  don't really need them might hide other problems. Again, I'm unsure if this is just my naïveté showing. 
+  <br/>
+  After settling on first layer settings, I was able to print a bunch of objects in a row without too much trouble. Satisfying!
+
+
+</div>
+</body>
+</html>
+
