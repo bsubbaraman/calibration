@@ -177,6 +177,12 @@ hr:after {
   border: 2px solid #aeb3f7;
 }
 
+
+.fig_img:hover {
+  transform: scale(2);
+  z-index: 10;
+}
+
 .center {
   display: block;
   /* margin-left: 40%; */

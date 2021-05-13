@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blair Subbaraman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/jpg" href="../images/favicon_j.png"/>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<a class="anchor" id="top"></a>
+<div class="topnav">
+  <a id="button_purp" href="../index.html#top">Home</a>
+</div>
+
+<div class="post-content">
+  <h2><mark>gcode fun</mark></h2>
+  <span class="post-meta">2021.05.13 | blair </span>
+
+  <br/><br/>
+
+  After working through artifact-driven projects for class, I wanted to get more familiar with the GCode itself as a way to get closer to printer settings & properties. 
+  To do so, I started with Grasshopper python scripting, thinking I could generate GCode from there. I made a simple generator for <a href="https://en.wikipedia.org/wiki/Lissajous_knot">Lissajous knots</a>, using the equations
+  $$x = cos(n_xt + \phi_x), \quad y = cos(n_yt + \phi_y), \quad z = cos(n_zt + \phi_z)$$
+
+  where \(n_x, n_y, n_z\) need to be relatively prime for the knot to not self-intersect, and any one of the phase shifts can be
+  assumed to be 0. The generator is controlled from grasshopper:
+
+  <br/><br/>
+  <div class="gallery">
+  <img class="fig_img" src="../images/knot-generator.gif"> <br/>
+  <span class="post-meta"> some knots! </span>
+</div>
+
+For some improved gcode literacy I looked through my Cura-generated files using <a href="https://marlinfw.org/meta/gcode/"> Marlin's gcode reference</a>. I moved on to trying to recreate
+Joris van Tubergen's <a href="http://www.rooiejoris.nl/real-3d-printing/"> experiments in Z</a>, where he balanced speed/flow rate/temperature to print non-horizontal lines. 
+
+Here's an example of progress so far, using GCode generated from a Grasshopper python script:
+
+<br/><br/>
+<div class="gallery">
+<img class="fig_img" src="../images/experiments-in-z.gif"> <br/>
+<span class="post-meta"> 🧬 </span>
+</div>
+
+<br/><br/>
+
+
+
+</div>
+</body>
+</html>
+
